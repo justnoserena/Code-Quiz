@@ -1,9 +1,9 @@
-// var startCard = document.getElementById("start-page");
-var startBtn =document.getElementsByClassName ("start-btn");
+var startCard = document.getElementById("start-page");
+var startBtn =document.getElementById ("start-btn");
 var quiz = document.getElementsByClassName("quiz-ctn");
 var questions = document.getElementsByClassName("question-ctn");
 var options = document.getElementsByClassName("option-ctn");
-
+console.log(startBtn)
 var questions = [{
     number: 1,
     question:"What does HTML stand for?",
@@ -35,5 +35,9 @@ var questions = [{
     correct: "1c",
 }];
 
+function startQuiz () {
+    startCard.style.display = "none";
 
-startBtn.onClick = startQuiz();
+}
+
+startBtn.addEventListener("click",startQuiz);
